@@ -18,6 +18,10 @@ function DomberComponent() {
         setCount(document.getElementById("inputTextForCount").value.length)
     }
 
+    function useSetEcount(){
+        setECount(document.getElementById("inputTextForEffect").value.length)
+    }
+
     return (
         <>
             <div className={styles.row}>
@@ -33,7 +37,7 @@ function DomberComponent() {
             </div>
 
             <div className={styles.row}>
-                <input id="inputTextForEffect" type="text" placeholder="Just Try Me Bro"></input>
+                <input id="inputTextForEffect" type="text" placeholder="Just Try Me Bro" onChange={useSetEcount}></input>
                 <p>Liczba znaków: {eCount}</p>
             </div>
         </>)
