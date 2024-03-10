@@ -1,13 +1,20 @@
 import dwarf from '../assets/dwarf-paper-crafts.png'
 import styles from './Row.module.css'
-import PropTypes from 'prop-types'
 
 function Row(props) {
+    // funne easter egg
     var g = "g"
     if (props.name == "Jyn Romper"){g=" grosze"}
+    // funkcjonalność związana z kursem
+    function ImageClick(e){
+        e.target.style.display = "none"
+    }
+    // co komponent zwraca
     return (
         <div className={styles.row}>
-            <img src={dwarf} className={styles.pfp}></img>
+            {/* obrazek */}
+            <img onClick={(e) => ImageClick(e)} src={dwarf} className={styles.pfp}></img>
+            {/* info z tabeli */}
             <table className={styles.tableSection}>
                 <tbody>
                     <tr>
@@ -19,6 +26,7 @@ function Row(props) {
                     </tr>
                 </tbody>
             </table>
+            {/* przyciski */}
             <div className={styles.buttonSection}>
                 <button>EQ</button>
                 <button>DELETE</button>
