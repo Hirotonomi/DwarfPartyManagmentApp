@@ -1,13 +1,11 @@
 import Row from './RowModule/Row.jsx'
-import tableData from './apiShit/GettingData.jsx'
 import DomberComponent from './domberModule/DomberComponent.jsx'
-
-const TableCon = tableData.map(row => <Row key={row.id} name={row.name} DNDc={row.DNDc} hp={row.hp} gold={row.gold}/>)
+import Table from './TableModule/Table.jsx'
 
 function App() {
   return (
     <>
-      {TableCon}
+      <Table/>
       <Row/>
       <DomberComponent/>
  

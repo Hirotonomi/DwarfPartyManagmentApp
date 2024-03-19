@@ -1,6 +1,5 @@
 import dwarf from '../assets/dwarf-paper-crafts.png'
 import styles from './Row.module.css'
-import PropTypes from 'prop-types'
 
 function Row(props) {
     var g = "g"
